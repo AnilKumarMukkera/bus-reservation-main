@@ -1,0 +1,52 @@
+.mixed-layout {
+  width: fit-content;
+}
+
+.mixed-layout .deck-panel-seater .deck-seat-row {
+  --mixed-seat-width: 50px;
+  --mixed-aisle-width: 32px;
+  display: grid;
+  grid-template-columns: var(--mixed-seat-width) var(--mixed-aisle-width) var(--mixed-seat-width) var(--mixed-seat-width);
+  column-gap: 16px;
+  justify-content: start;
+  align-items: start;
+}
+
+.mixed-layout .deck-panel-seater .seat-box {
+  min-width: 58px;
+  max-width: 58px;
+  min-height: 56px;
+  border-radius: 9px;
+  padding: 4px 3px 4px;
+}
+
+.mixed-layout .deck-panel-seater .seat-slot.spacer {
+  min-height: 54px;
+  width: 32px;
+}
+
+.mixed-layout .deck-panel-seater .seat-number {
+  font-size: 0.72rem;
+  margin-top: 0;
+}
+
+.mixed-layout .deck-panel-seater .seat-status-label {
+  font-size: 0.54rem;
+}
+
+.mixed-layout .deck-panel-seater .seat-tag {
+  font-size: 0.5rem;
+  padding: 1px 3px;
+}
+
+@media (max-width: 768px) {
+  .mixed-layout {
+    width: 100%;
+  }
+
+  .mixed-layout .deck-panel-seater .deck-seat-row {
+    --mixed-seat-width: 52px;
+    --mixed-aisle-width: 24px;
+    column-gap: 12px;
+  }
+}

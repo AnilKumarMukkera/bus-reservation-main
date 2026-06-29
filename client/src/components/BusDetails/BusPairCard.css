@@ -1,0 +1,85 @@
+.bus-pair-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bus-pair-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, border-color 220ms ease;
+  will-change: transform, box-shadow;
+}
+
+/* Elevated hover to match inner .bus-card hover and create a pleasing glow */
+.bus-pair-card:hover {
+  transform: translateY(-4px);
+  border-color: #4290de;
+  box-shadow: 0 20px 40px rgba(66,144,222,0.10), 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Lift child bus cards slightly and apply matching blue glow on parent hover */
+.bus-pair-card:hover .bus-card {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(66,144,222,0.14);
+  border-color: #4290de;
+}
+
+/* Keyboard accessibility */
+.bus-pair-card:focus-within {
+  outline: 3px solid rgba(66,144,222,0.8) ;
+  outline-offset: 4px;
+} 
+
+.pair-bus-section {
+  margin-bottom: 14px;
+}
+
+.pair-bus-section:last-of-type {
+  margin-bottom: 10px;
+}
+
+.pair-title {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4290de;
+}
+
+.pair-total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed #d9e3ef;
+  padding-top: 10px;
+}
+
+.pair-total-price p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5c6b7a;
+}
+
+.pair-total-price strong {
+  font-size: 1.1rem;
+  color: #1f2d3d;
+}
+.pair-total-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .bus-pair-card {
+    padding: 12px;
+  }
+
+  .pair-title {
+    font-size: 0.9rem;
+  }
+}

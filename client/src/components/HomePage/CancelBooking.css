@@ -1,0 +1,185 @@
+.cancel-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #f0f4f8 0%, #e0e7ff 100%);
+}
+
+.cancel-card {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.15);
+  padding: 2rem;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.cancel-card-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.cancel-card-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1e40af;
+}
+
+.cancel-card-header p {
+  margin: 0.75rem auto 0;
+  color: #5b6d8a;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.cancel-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.cancel-form label {
+  font-weight: 600;
+  color: #22304f;
+}
+
+.cancel-form input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #dbeafe;
+  background: #f9fbff;
+  font-size: 1rem;
+  color: #1f2a3d;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+}
+
+.cancel-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Read-only ticket ID field — clearly non-editable */
+.readonly-input {
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  cursor: not-allowed;
+  border-color: #e2e8f0 !important;
+}
+
+/* Reason dropdown */
+.cancel-select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #dbeafe;
+  background: #f9fbff;
+  font-size: 1rem;
+  color: #1f2a3d;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+  appearance: auto;
+}
+
+.cancel-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Primary cancel button */
+.cancel-submit-button {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cancel-submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.cancel-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Go back button */
+.cancel-back-button {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancel-back-button:hover:not(:disabled) {
+  background: #e2e8f0;
+}
+
+/* Messages */
+.cancel-message {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-size: 0.96rem;
+}
+
+.cancel-error {
+  background: rgba(248, 215, 218, 0.9);
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Success state */
+.cancel-success-state {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.cancel-success-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.cancel-success-state h3 {
+  font-size: 1.4rem;
+  color: #166534;
+  margin: 0 0 8px;
+}
+
+.cancel-success-state p {
+  color: #374151;
+  margin: 0 0 8px;
+}
+
+.cancel-redirect-note {
+  font-size: 0.875rem;
+  color: #6b7280 !important;
+}
+
+@media (max-width: 560px) {
+  .cancel-card {
+    padding: 1.5rem;
+  }
+
+  .cancel-card-header h1 {
+    font-size: 1.7rem;
+  }
+}

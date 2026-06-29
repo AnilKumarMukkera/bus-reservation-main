@@ -1,0 +1,93 @@
+.sleeper-layout {
+  width: fit-content;
+}
+
+.deck-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 28px;
+  justify-content: start;
+  align-items: start;
+}
+
+.deck-panel {
+  border: 1px solid #dbe2ea;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  padding: 16px 16px 18px;
+  width: fit-content;
+}
+
+.deck-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.deck-panel-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2b2f36;
+}
+
+.steering-wheel {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-left: auto;
+  display: inline-block;
+  /* image placed in client/src/assets per refactor */
+  background-image: url('../../assets/steering.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.deck-seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deck-seat-row {
+  --sleeper-seat-width: 56px;
+  --sleeper-aisle-width: 30px;
+  display: grid;
+  grid-template-columns: var(--sleeper-seat-width) var(--sleeper-aisle-width) var(--sleeper-seat-width) var(--sleeper-seat-width);
+  column-gap: 14px;
+  justify-content: start;
+  align-items: start;
+}
+
+.seat-slot.spacer {
+  min-height: 104px;
+  width: var(--sleeper-aisle-width, 26px);
+}
+
+.empty-deck-message {
+  margin: 0;
+  color: #6f7682;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .deck-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-panel {
+    width: 100%;
+  }
+
+  .sleeper-layout {
+    width: 100%;
+  }
+
+  .deck-seat-row {
+    --sleeper-seat-width: 50px;
+    --sleeper-aisle-width: 22px;
+    grid-template-columns: var(--sleeper-seat-width) var(--sleeper-aisle-width) var(--sleeper-seat-width) var(--sleeper-seat-width);
+    column-gap: 10px;
+  }
+}

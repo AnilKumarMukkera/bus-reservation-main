@@ -1,0 +1,67 @@
+/* Individual Card Container */
+.bus-card {
+  display: flex;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.bus-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-color: #4290de;
+}
+
+/* Common Section Rules */
+.bus-section { display: flex; flex-direction: column; }
+
+/* 1. Info Styling */
+.info { flex: 2; }
+.top-row { display: flex; align-items: center; gap: 8px; }
+.bus-name { font-size: 1.1rem; font-weight: 700; margin: 0; color: #1a1a1a; text-decoration: none; border-bottom: none; }
+.ad-tag { border: 1px solid #ccc; font-size: 0.6rem; padding: 1px 4px; border-radius: 2px; color: #888; }
+.bus-type { font-size: 0.85rem; color: #666; margin: 4px 0 12px 0; }
+.rating-badge { background: #38b87c; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; display: inline-block; }
+
+/* 2. Timeline Styling */
+.timeline {
+  flex: 3;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.time-block { display: flex; flex-direction: column; align-items: center; }
+.time { font-size: 1.2rem; font-weight: 700; }
+.location { font-size: 0.8rem; color: #888; }
+
+.duration-wrapper { display: flex; flex-direction: column; align-items: center; min-width: 100px; }
+.visual-path { display: flex; align-items: center; width: 100%; position: relative; }
+.path-line { height: 1px; background: #ddd; flex-grow: 1; margin: 0 4px; border-top: 1px dashed #bbb; }
+.dot { width: 6px; height: 6px; border: 1px solid #bbb; border-radius: 50%; background: white; }
+
+/* 3. Action Styling */
+.action {
+  flex: 1.5;
+  align-items: flex-end;
+  border-left: 1px dashed #eee;
+  padding-left: 20px;
+}
+.price-label { font-size: 0.9rem; font-weight: 450; }
+
+.price-value { font-size: 1.4rem; font-weight: 450; color: #1a1a1a; margin-left: 8px;}
+.select-seats-btn {
+  background: #4290de;
+  color: white;
+  border: none;
+  width: 175px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.seats-status { font-size: 0.85rem; color: #21b544; font-weight: 600; }
+.seats-status.low { color: #d84e55; }

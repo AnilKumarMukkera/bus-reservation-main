@@ -1,0 +1,43 @@
+.seat-summary-panel {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.seat-summary-panel h3 {
+  margin-top: 0;
+}
+
+.selected-seat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.two-way-summary {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #d9e3ef;
+}
+
+.selected-seat-chip {
+  background: #eef5ff;
+  color: #1f5fa6;
+  border: 1px solid #c9def7;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.continue-btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: #4290de;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}

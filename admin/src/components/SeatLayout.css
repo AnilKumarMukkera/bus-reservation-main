@@ -1,0 +1,215 @@
+.admin-seat-layout-panel {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.admin-seat-layout-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.admin-seat-layout-header p {
+  margin: 0.35rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.admin-layout-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.layout-toggle-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.layout-toggle-btn.active {
+  border-color: #4290de;
+  color: #1363b5;
+  background: #edf5ff;
+}
+
+.admin-seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0 1.25rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.admin-seat-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-chip {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid #cbd5e1;
+}
+
+.legend-chip.general {
+  background: #ffffff;
+}
+
+.legend-chip.female {
+  background: #fce4ec;
+  border-color: #f06292;
+}
+
+.admin-layout-card {
+  border: 1px solid #dbe2ea;
+  border-radius: 14px;
+  background: #f8f9fb;
+  padding: 1rem;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.layout-card-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.layout-card-header p {
+  margin: 0.2rem 0 0.9rem;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+
+.admin-seat-grid,
+.admin-deck-seat-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-seat-grid {
+  gap: 6px;
+}
+
+/* Shared seat box baseline (sleeper-like defaults). Seater/mixed overrides live in specific files. */
+.admin-seat-box {
+  min-width: 56px;
+  max-width: 56px;
+  min-height: 104px;
+  border-radius: 12px;
+  border: 2px solid #1f9d45;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  padding: 10px 6px 8px;
+  box-sizing: border-box;
+}
+
+.admin-seat-box.available {
+  background: #ffffff;
+}
+
+.admin-seat-box.female-only {
+  background: #fce4ec;
+  border-color: #f06292;
+  color: #a4004f;
+}
+
+.admin-seat-box .seat-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 1;
+}
+
+.admin-seat-box .seat-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+.admin-seat-box .seat-status-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #666666;
+  margin-top: auto;
+  line-height: 1;
+}
+
+
+.admin-seat-row {
+  display: grid;
+  align-items: start;
+}
+
+.admin-deck-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 28px;
+  justify-content: start;
+  align-items: start;
+}
+
+.admin-deck-panel {
+  border: 1px solid #dbe2ea;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  padding: 16px 16px 18px;
+  width: fit-content;
+}
+
+
+
+.admin-deck-panel-header h5 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2b2f36;
+}
+
+.admin-deck-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.admin-steering-wheel {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url('../assets/steering.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .admin-deck-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-deck-panel {
+    width: 100%;
+  }
+  
+}

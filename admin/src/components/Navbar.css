@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════════════════
+   Admin Navbar  ·  Modern Professional Dark Header
+═══════════════════════════════════════════════════ */
+
+.admin-navbar {
+   background: linear-gradient(90deg, #070202 0%, #122956 100%);         /* deep slate — high contrast base */
+  padding: 0 2rem;
+  height: 62px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.30);
+  display: flex;
+  align-items: center;
+}
+
+/* ── Logo ── */
+.navbar-logo {
+  color: #ffffff !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  margin-right: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  text-decoration: none !important;
+  flex-shrink: 0;
+}
+
+.navbar-logo svg {
+  width: 22px;
+  height: 22px;
+  color: #60a5fa;   /* bright accent blue on dark */
+}
+
+/* ── Nav links ── */
+.nav-item {
+  display: flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.68) !important;
+  font-weight: 500;
+  font-size: 0.845rem;
+  padding: 0.38rem 0.75rem !important;
+  border-radius: 7px;
+  transition: color 0.18s ease, background 0.18s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  line-height: 1;
+  text-decoration: none !important;
+}
+
+.nav-item:hover,
+.nav-item:focus-visible {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+  text-decoration: none !important;
+}
+
+.nav-item:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.nav-item svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.80;
+  flex-shrink: 0;
+}
+
+.nav-item:hover svg,
+.nav-item:focus-visible svg {
+  opacity: 1;
+}
+
+/* ── Right side — profile + logout ── */
+.navbar-admin {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+/* Profile link — same style as nav-item */
+.navbar-admin .nav-item {
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+/* ── Logout button ── */
+.logout-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 1rem !important;
+  font-size: 0.845rem;
+  font-weight: 600;
+  border-radius: 7px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  font-family: inherit;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none !important;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.18) !important;
+  border-color: rgba(239, 68, 68, 0.45) !important;
+  color: #fca5a5 !important;
+  transform: translateY(-1px);
+}
+
+.logout-btn:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.logout-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Hamburger toggle (mobile) ── */
+.navbar-toggler {
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  padding: 0.3rem 0.55rem !important;
+  border-radius: 6px !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px #60a5fa !important;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .admin-navbar {
+    padding: 0 1.25rem;
+    height: auto;
+    min-height: 58px;
+  }
+
+  /* Collapse panel styling */
+  #admin-navbar-nav {
+    padding: 0.75rem 0 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 0.5rem;
+  }
+
+  .nav-item {
+    padding: 0.6rem 0.75rem !important;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .navbar-admin {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

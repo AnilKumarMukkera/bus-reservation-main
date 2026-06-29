@@ -1,0 +1,325 @@
+/* ── Overlay ── */
+.pdm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 16px;
+  animation: pdm-fade-in 0.2s ease;
+}
+
+@keyframes pdm-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal box ── */
+.pdm-modal {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  animation: pdm-slide-up 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+@keyframes pdm-slide-up {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+
+/* ── Header ── */
+.pdm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid #f0f4f8;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+.pdm-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pdm-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pdm-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pdm-subtitle {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.pdm-close-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.pdm-close-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+/* ── Body (scrollable) ── */
+.pdm-body {
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Passenger card ── */
+.pdm-passenger-card {
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  background: #f8fafc;
+  transition: border-color 0.2s;
+}
+
+.pdm-passenger-card:focus-within {
+  border-color: #2563eb;
+  background: #fff;
+}
+
+.pdm-passenger-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pdm-passenger-avatar {
+  font-size: 1.6rem;
+  width: 40px;
+  height: 40px;
+  background: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pdm-passenger-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.3px;
+}
+
+/* ── Fields ── */
+.pdm-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pdm-field-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 14px;
+}
+
+.pdm-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pdm-required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.pdm-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pdm-input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.pdm-input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background: #fff;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-sizing: border-box;
+}
+
+.pdm-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.pdm-input::placeholder {
+  color: #94a3b8;
+}
+
+/* ── Gender radio pills ── */
+.pdm-gender-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pdm-radio-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pdm-gender-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #475569;
+  background: #fff;
+  transition: border-color 0.18s, background 0.18s, color 0.18s;
+  user-select: none;
+}
+
+.pdm-gender-option:hover {
+  border-color: #2563eb;
+  color: #1e3a8a;
+}
+
+.pdm-gender-option--selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.pdm-gender-icon {
+  font-size: 1rem;
+}
+
+/* ── Error ── */
+.pdm-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #991b1b;
+  font-size: 0.9rem;
+  margin: 0 24px 4px;
+}
+
+/* ── Footer ── */
+.pdm-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid #f0f4f8;
+}
+
+.pdm-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.pdm-btn--secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1.5px solid #e2e8f0;
+}
+
+.pdm-btn--secondary:hover {
+  background: #e2e8f0;
+}
+
+.pdm-btn--primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.pdm-btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .pdm-field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pdm-header {
+    padding: 18px 18px 14px;
+  }
+
+  .pdm-body {
+    padding: 16px 18px;
+  }
+
+  .pdm-footer {
+    padding: 14px 18px 18px;
+    flex-direction: column-reverse;
+  }
+}

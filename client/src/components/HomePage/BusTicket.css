@@ -1,0 +1,336 @@
+.bus-ticket-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.bus-ticket {
+  width: min(100%, 600px);
+  margin: 32px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #eaeaea;
+}
+.bus-ticket__footer {
+  width: min(100%, 600px);
+  background-color: #f8fafc;
+  padding: 24px;
+  border-top: 1px dashed #cbd5e1;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  text-align: center;
+  margin: 0 auto 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.bus-ticket__footer p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.bus-ticket__actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bus-ticket__btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+/* Primary Button (Go to Bookings) */
+.bus-ticket__btn--bookings {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+}
+
+.bus-ticket__btn--bookings:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.3);
+}
+
+/* Print Button */
+.bus-ticket__btn--print {
+  background-color: #10b981;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.12);
+}
+.bus-ticket__btn--print:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+/* Secondary/Danger Button (Cancel Ticket) */
+.bus-ticket__btn--cancel {
+  background-color: #ffffff;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+}
+
+.bus-ticket__btn--cancel:hover {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+}
+
+/* Empty State Styling */
+.no-data-msg {
+  text-align: center;
+  padding: 20px !important;
+  color: #94a3b8 !important;
+  font-style: italic;
+  background-color: #f8fafc;
+}
+.bus-ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  color: #ffffff;
+}
+
+.bus-ticket__label {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #bfdbfe;
+}
+
+.bus-ticket__title {
+  margin: 4px 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.bus-ticket__header-right {
+  text-align: right;
+}
+
+.bus-ticket__status {
+  display: inline-block;
+  background: #10b981;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.bus-ticket__pnr {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.bus-ticket__section {
+  padding: 24px;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.bus-ticket__route-overview {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.bus-ticket__route-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.bus-ticket__datetime {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.bus-ticket__locations {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bus-ticket__location-box {
+  flex: 1;
+}
+
+.bus-ticket__location-box:last-child {
+  text-align: right;
+}
+
+.bus-ticket__term {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.bus-ticket__definition {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.bus-ticket__section-title {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.bus-ticket__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bus-ticket__table th {
+  text-align: left;
+  padding-bottom: 8px;
+  color: #64748b;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bus-ticket__table td {
+  padding: 12px 0;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.bus-ticket__seat {
+  font-weight: 600;
+  color: #3b82f6 !important;
+}
+
+.bus-ticket__payment {
+  background: #f8fafc;
+  border-bottom: none;
+}
+
+.bus-ticket__payment-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bus-ticket__payment-label {
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.bus-ticket__payment-total {
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.bus-ticket-loading {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+
+/* ── Cancel confirmation popup (shared with Bookings page) ── */
+.cancel-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cancel-confirm-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 28px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.cancel-confirm-box h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.cancel-confirm-box p {
+  margin: 0 0 24px;
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cancel-confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Print media: hide actions and unnecessary chrome when printing */
+@media print {
+  .bus-ticket__actions, .cancel-confirm-overlay, .cancel-confirm-box { display: none !important; }
+  body * { visibility: hidden; }
+  .bus-ticket__header, .bus-ticket, .bus-ticket * { visibility: visible; }
+
+  /* Ensure browsers that suppress background colors in print will attempt to render them */
+  .bus-ticket, .bus-ticket__header {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Force a solid fallback color for print (gradients sometimes aren't printed) */
+  .bus-ticket__header {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%) !important;
+    background-color: #1e3a8a !important;
+    color: #ffffff !important;
+  }
+
+  .bus-ticket { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; }
+}
+
+.confirm-yes-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirm-yes-btn:hover:not(:disabled) { background: #dc2626; }
+.confirm-yes-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.confirm-no-btn {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirm-no-btn:hover:not(:disabled) { background: #e2e8f0; }

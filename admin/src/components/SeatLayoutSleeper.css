@@ -1,0 +1,26 @@
+/* Sleeper-specific styles (decked layout defaults) */
+.admin-deck-seat-grid {
+  gap: 16px;
+}
+
+.admin-seat-row.admin-deck-seat-row {
+  --sleeper-seat-width: 56px;
+  --sleeper-aisle-width: 30px;
+  grid-template-columns: var(--sleeper-seat-width) var(--sleeper-aisle-width) var(--sleeper-seat-width) var(--sleeper-seat-width);
+  column-gap: 14px;
+}
+
+/* explicit sleeper spacer class for clarity */
+.admin-seat-slot.spacer.sleeper-spacer {
+  min-height: 104px;
+  width: var(--sleeper-aisle-width, 26px);
+}
+
+@media (max-width: 768px) {
+  .admin-seat-row.admin-deck-seat-row {
+    --sleeper-seat-width: 50px;
+    --sleeper-aisle-width: 22px;
+    grid-template-columns: var(--sleeper-seat-width) var(--sleeper-aisle-width) var(--sleeper-seat-width) var(--sleeper-seat-width);
+    column-gap: 10px;
+  }
+}

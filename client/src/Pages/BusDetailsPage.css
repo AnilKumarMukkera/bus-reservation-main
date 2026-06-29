@@ -1,0 +1,64 @@
+/* Container Layout */
+.bus-details-page {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  background-color: white;
+  min-height: 100vh;
+}
+
+/* Sidebar Styling (25%) */
+.sidebar-container {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  height: fit-content;
+  padding: 15px;
+  position: sticky;
+  top: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sidebar-container:hover {
+  border-color: #4290de;
+  box-shadow: 0 6px 18px rgba(66, 144, 222, 0.18);
+}
+
+/* Main Content Styling (75%) */
+.main-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Loading & Error Messages */
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.loading-message {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .bus-details-page {
+    flex-direction: column;
+  }
+}

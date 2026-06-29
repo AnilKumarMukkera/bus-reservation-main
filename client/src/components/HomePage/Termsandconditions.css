@@ -1,0 +1,115 @@
+
+/* Modern, clean, responsive Terms and Conditions styles */
+.terms-container {
+	max-width: 800px;
+	margin: 40px auto;
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+	padding: 32px 16px;
+}
+.terms-header-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 28px;
+}
+.terms-title {
+	font-size: 2.2rem;
+	font-weight: 800;
+	color: #1a1a2e;
+	letter-spacing: 1px;
+	margin: 0;
+}
+.terms-section-select {
+	font-size: 1.1rem;
+	padding: 8px 16px;
+	border-radius: 8px;
+	border: 1.5px solid #e3e6ee;
+	background: #f4f6fb;
+	color: #22223b;
+	outline: none;
+	transition: border 0.2s;
+}
+.terms-section-select:focus {
+	border-color: #4a6fa1;
+}
+.terms-section {
+	border-radius: 14px;
+	margin-bottom: 18px;
+	overflow: hidden;
+	background: #f4f6fb;
+	box-shadow: 0 1px 4px rgba(34,34,59,0.06);
+	transition: box-shadow 0.2s, background 0.2s;
+	border: 1.5px solid #e3e6ee;
+}
+.terms-section.open {
+	background: #eaf0fb;
+	box-shadow: 0 4px 16px rgba(34,34,59,0.10);
+	border-color: #b2c6e6;
+}
+.terms-header {
+	cursor: pointer;
+	width: 100%;
+	padding: 20px 28px;
+	font-size: 1.18rem;
+	font-weight: 700;
+	background: transparent;
+	color: #22223b;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: none;
+	outline: none;
+	border-radius: 14px;
+	transition: background 0.18s, color 0.18s;
+	box-shadow: none;
+}
+.terms-header:hover, .terms-header:focus {
+	background: #dde6f7;
+	color: #1a1a2e;
+}
+.terms-arrow {
+	font-size: 1.3rem;
+	margin-left: 18px;
+	color: #4a6fa1;
+	transition: transform 0.3s;
+	display: flex;
+	align-items: center;
+}
+.terms-content {
+	padding: 0 28px 20px 38px;
+	font-size: 1.05rem;
+	color: #22223b;
+}
+.terms-content ul {
+	margin: 0;
+	padding-left: 18px;
+}
+.terms-content li {
+	margin-bottom: 10px;
+	line-height: 1.7;
+}
+@media (max-width: 600px) {
+	.terms-container {
+		padding: 16px 2px;
+	}
+	.terms-header-row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+	.terms-title {
+		font-size: 1.4rem;
+	}
+	.terms-header {
+		padding: 14px 12px;
+		font-size: 1rem;
+	}
+	.terms-content {
+		padding: 0 10px 14px 18px;
+		font-size: 0.98rem;
+	}
+}

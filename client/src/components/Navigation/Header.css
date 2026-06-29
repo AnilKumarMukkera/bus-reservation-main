@@ -1,0 +1,176 @@
+/* ══════════════════════════════════════════
+   NAVIGATION BAR
+══════════════════════════════════════════ */
+
+.custom-navbar {
+  padding: 0 2rem;
+  height: 62px;
+  background: linear-gradient(90deg, #070202 0%, #122956 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 16px rgba(26, 86, 219, 0.28);
+  display: flex;
+  align-items: center;
+}
+
+/* ── Brand ── */
+.custom-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  margin-right: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+}
+
+.custom-navbar .navbar-brand::before {
+  content: '🚌';
+  font-size: 1.1rem;
+}
+
+/* ── Toggler (mobile) ── */
+.custom-navbar .navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 8px;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ── Nav links ── */
+.custom-navbar .me-auto {
+  gap: 2px;
+}
+
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 500;
+  font-size: 0.93rem;
+  padding: 6px 14px !important;
+  border-radius: 7px;
+  transition: background 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+
+.custom-navbar .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+/* ── Right icons (Wallet, Account) ── */
+.user-icon {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: 7px;
+  transition: background 0.18s, color 0.18s;
+  margin-left: 2px;
+  text-decoration: none !important;
+}
+
+.user-icon:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+/* ── Auth buttons ── */
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.btn.login-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 8px !important;
+  padding: 6px 18px !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  transition: background 0.18s !important;
+}
+
+.btn.login-btn:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.btn.signup-btn {
+  background: #ffffff !important;
+  color: #1a56db !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 18px !important;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.18s, transform 0.15s !important;
+}
+
+.btn.signup-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Logout ── */
+.logout-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 6px 16px !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  margin-left: 6px;
+  transition: background 0.18s !important;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .custom-navbar {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .custom-navbar .nav-link,
+  .user-icon {
+    padding: 10px 14px !important;
+    border-radius: 8px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+    gap: 6px;
+  }
+
+  .btn.login-btn,
+  .btn.signup-btn,
+  .logout-btn {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+  }
+}

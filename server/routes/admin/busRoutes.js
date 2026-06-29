@@ -1,0 +1,27 @@
+const express = require("express");
+const {
+  createBus,
+  getAllBuses,
+  getBusById,
+  updateBus,
+  deleteBus,
+} = require("../../controller/admin/busController");
+
+const router = express.Router();
+
+
+router.post("/", createBus);
+
+
+router.get("/", getAllBuses);
+
+
+router.get("/:id", getBusById);
+
+
+router.put("/:id", updateBus);
+
+
+router.delete("/:id", deleteBus);
+
+module.exports = router;

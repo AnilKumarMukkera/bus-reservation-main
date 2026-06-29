@@ -1,0 +1,322 @@
+.route-container {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.route-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.route-header p {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Form Styling */
+.route-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.route-form h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Wide modifier to make a field span two columns in the grid (used for Bus selector) */
+.form-flex.wide {
+  grid-column: span 2;
+}
+
+.form-flex label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-input,
+.form-select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  background: #f0f8ff;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #229954;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btn-primary:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #c0392b;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.btn-secondary:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #f5c6cb;
+}
+
+/* Table Wrapper */
+.route-table-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.route-table-wrapper h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.loading-text,
+.empty-text {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+/* Table Styling */
+.route-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.route-table thead {
+  background: #34495e;
+  color: white;
+}
+
+.route-table th {
+  padding: 0.9rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #2c3e50;
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.route-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background 0.3s ease;
+}
+
+.route-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.route-table td {
+  padding: 0.9rem 0.8rem;
+  color: #2c3e50;
+  vertical-align: middle;
+}
+
+.route-table .bus-name {
+  font-weight: 500;
+  color: #2980b9;
+  max-width: 100px;
+}
+
+.route-table .bus-name small {
+  display: block;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+/* Status Badge */
+.route-table .status {
+  padding: 0.35rem 0.7rem;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.route-table .status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.route-table .status.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Actions Cell */
+.route-table td.actions {
+  text-align: center;
+  
+}
+
+.action-btn {
+  /* Set exact dimensions */
+  width: 36px;
+  height: 36px;
+  
+  /* Remove padding so it doesn't crush the icon! */
+  padding: 0; 
+  margin: 0 0.3rem;
+  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Flexbox will perfectly center the icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn svg {
+  /* Force the icon size */
+  width: 18px !important;
+  height: 18px !important;
+  
+  /* This is the magic line! It stops the button from squishing the icon */
+  flex-shrink: 0 !important; 
+}
+
+.action-btn.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+.action-btn.delete:hover:not(:disabled) {
+  background: #c0392b;
+  box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+.action-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .route-container {
+    padding: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .route-table {
+    font-size: 0.85rem;
+  }
+
+  .route-table th,
+  .route-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

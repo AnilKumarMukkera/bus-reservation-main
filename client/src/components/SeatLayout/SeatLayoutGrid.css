@@ -1,0 +1,212 @@
+.seat-grid-panel {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.seat-grid-title h3,
+.seat-grid-title p {
+  margin: 0;
+}
+
+.seat-grid-title {
+  margin-bottom: 12px;
+}
+
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.seat-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.legend-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid #999;
+}
+
+.legend-box.available {
+  background: #ffffff;
+}
+
+.legend-box.booked {
+  background: #d9d9d9;
+}
+
+
+.legend-box.selected {
+  background: #4290de;
+  border-color: #4290de;
+}
+
+.legend-box.female-only {
+  background: #fce4ec;
+  border-color: #f06292;
+}
+
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seat-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.seat-box {
+  width: 100%;
+  min-width: 56px;
+  max-width: 56px;
+  min-height: 104px;
+  border: 2px solid #1f9d45;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap:4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  position: relative;
+  padding: 10px 6px 8px;
+}
+
+.seat-box,
+.seat-box * {
+  box-sizing: border-box;
+}
+
+.seater-layout .seat-box {
+  min-width: 38px;
+  max-width: 38px;
+  min-height: 54px;
+  height: 54px;
+  border-radius: 9px;
+  padding: 4px 3px 4px;
+  overflow: hidden;
+}
+
+.seater-layout .seat-slot.spacer {
+  min-height: 54px;
+  width: 38px;
+}
+
+.seater-layout .seat-number {
+  font-size: 0.72rem;
+  margin-top: 0;
+}
+
+.seater-layout .seat-status-label {
+  font-size: 0.54rem;
+}
+
+.seater-layout .seat-tag {
+  font-size: 0.5rem;
+  padding: 1px 3px;
+}
+
+.seater-layout .seat-box.female-only {
+  gap: 0;
+  padding: 4px 3px 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seater-layout .seat-box.female-only .seat-number {
+  margin: 0;
+  line-height: 1;
+}
+
+.seater-layout .seat-box.female-only .seat-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0 4px;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.seater-layout .seat-box.female-only .seat-status-label {
+  margin-top: 0;
+  line-height: 1;
+}
+
+.seat-box:hover {
+  transform: translateY(-1px);
+  border-color: #17913e;
+}
+
+.seat-box.available {
+  background: #ffffff;
+}
+
+.seat-box.booked {
+  background: #efefef;
+  color: #a3a3a3;
+  cursor: not-allowed;
+  border-color: #d6d6d6;
+}
+
+
+.seat-box.selected {
+  background: #4290de;
+  color: #ffffff;
+  border-color: #4290de;
+}
+
+.seat-box.female-only {
+  background: #fce4ec;
+  border-color: #f06292;
+  color: #a4004f;
+}
+
+.seat-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.seat-tag {
+  font-size: 0.7rem;
+ 
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  padding: 2px 6px;
+}
+
+.seat-status-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: inherit;
+  margin-top: auto;
+  line-height: 1;
+}
+
+.seat-status-label.sold {
+  color: #9f9f9f;
+  font-weight: 600;
+}
+
+.seat-status-label.price {
+  color: #666666;
+}

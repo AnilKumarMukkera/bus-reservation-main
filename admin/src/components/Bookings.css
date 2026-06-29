@@ -1,0 +1,441 @@
+/* ═══════════════════════════════════════════════════
+   Bookings  ·  Modern Professional Admin UI
+═══════════════════════════════════════════════════ */
+
+.booking-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 36px 40px 60px;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: #f8fafc;
+  min-height: calc(100vh - 62px);
+}
+
+/* ── List page header ── */
+.booking-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.booking-header h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0 0 4px;
+}
+
+.booking-header p {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Search row ── */
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 380px;
+}
+
+/* .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);  
+  pointer-events: none;
+} */
+
+.search-box {
+  width: 100%;
+  padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+  border-radius: 9px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 0.855rem;
+  color: #0f172a;
+  font-family: inherit;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.search-box::placeholder { color: #94a3b8; }
+
+.search-box:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.result-count {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Table card ── */
+.booking-table-wrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.845rem;
+}
+
+.booking-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  font-size: 0.695rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.booking-table td {
+  padding: 0.8rem 1rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.booking-table tbody tr:last-child td { border-bottom: none; }
+.booking-table tbody tr:hover td { background: #f8fafc; }
+
+.ticket-id-cell { color: #475569; font-size: 0.78rem; }
+.amount-cell    { font-weight: 600; color: #0f172a; }
+.mono           { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; font-size: 0.78rem; }
+.ml-6           { margin-left: 6px; }
+
+/* ── Status pills ── */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-pill.confirmed   { background: #dcfce7; color: #15803d; }
+.status-pill.cancelled   { background: #fee2e2; color: #b91c1c; }
+.status-pill.rescheduled { background: #ede9fe; color: #6d28d9; }
+.status-pill.pending     { background: #fef9c3; color: #92400e; }
+.status-pill.refunded    { background: #fef3c7; color: #92400e; }
+
+/* ── Action buttons ── */
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.38rem 0.85rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.775rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.18s, border-color 0.18s, box-shadow 0.18s, transform 0.15s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none !important; }
+
+.btn-details {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+.btn-details:hover:not(:disabled) {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37,99,235,0.14);
+}
+
+.btn-refund {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+.btn-refund:hover:not(:disabled) {
+  background: #ffedd5;
+  border-color: #fb923c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(194,65,12,0.14);
+}
+
+.inline-refund-msg {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+.inline-refund-msg.success { background: #dcfce7; color: #166534; }
+.inline-refund-msg.error   { background: #fee2e2; color: #991b1b; }
+
+/* ── Empty / error states ── */
+.empty-text  { text-align: center; color: #94a3b8; padding: 2.5rem; font-size: 0.875rem; margin: 0; }
+.error-text  { color: #dc2626 !important; }
+
+/* ══════════════════════════════════════════════════
+   DETAIL PAGE
+══════════════════════════════════════════════════ */
+
+/* Back + title header */
+.detail-page-header {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.45rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.835rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.18s, border-color 0.18s;
+  margin-bottom: 1.25rem;
+}
+.back-btn:hover { background: #e2e8f0; border-color: #cbd5e1; }
+
+.detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-page-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0 0 4px;
+}
+
+.detail-ticket-id {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/* ── Info cards grid ── */
+.detail-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.detail-card-title {
+  font-size: 0.69rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dr-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dr-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.dr-value.amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.dr-value.capitalize { text-transform: capitalize; }
+
+.gender-split {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* ── Refund banner ── */
+.refund-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.refund-msg {
+  margin: 0;
+  font-size: 0.855rem;
+  font-weight: 500;
+}
+.refund-msg.success { color: #166534; }
+.refund-msg.error   { color: #991b1b; }
+
+/* ── Passenger section ── */
+.passengers-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.section-title {
+  font-size: 0.69rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.9rem 1.4rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.passenger-table-wrapper {
+  overflow-x: auto;
+}
+
+.passenger-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.passenger-table th {
+  text-align: left;
+  padding: 0.65rem 1rem;
+  font-size: 0.69rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.passenger-table td {
+  padding: 0.75rem 1rem;
+  color: #334155;
+  font-size: 0.855rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.passenger-table tbody tr:last-child td { border-bottom: none; }
+.passenger-table tbody tr:hover td { background: #f8fafc; }
+
+/* Gender badges */
+.gender-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
+.gender-badge.male   { background: #dbeafe; color: #1d4ed8; }
+.gender-badge.female { background: #fce7f3; color: #9d174d; }
+.gender-badge.other  { background: #f3e8ff; color: #6d28d9; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .detail-cards-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 1024px) {
+  .booking-container { padding: 24px 20px 48px; }
+}
+
+@media (max-width: 768px) {
+  .booking-table-wrapper { overflow-x: auto; }
+  .booking-table { font-size: 0.8rem; }
+  .booking-table th,
+  .booking-table td { padding: 0.65rem 0.75rem; }
+  .detail-cards-grid { grid-template-columns: 1fr; }
+  .detail-title-row { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .booking-container { padding: 16px 12px 40px; }
+  .search-row { flex-direction: column; align-items: flex-start; }
+  .search-wrapper { max-width: 100%; width: 100%; }
+}

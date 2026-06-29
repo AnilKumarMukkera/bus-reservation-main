@@ -1,0 +1,196 @@
+/* ══════════════════════════════════════════
+   ABOUT US PAGE
+══════════════════════════════════════════ */
+
+.aboutus-container {
+  max-width: 1000px;
+  margin: 48px auto 64px;
+  padding: 0 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* ── Header ── */
+.aboutus-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.aboutus-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.aboutus-header h1 span {
+  color: #1a56db;
+}
+
+.aboutus-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ── Content sections ── */
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aboutus-content article,
+.aboutus-features,
+.aboutus-contact {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 16px rgba(15,23,42,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.aboutus-content article:hover,
+.aboutus-features:hover,
+.aboutus-contact:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06), 0 12px 32px rgba(26, 86, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+.aboutus-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutus-content h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 22px;
+  background: #1a56db;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.aboutus-content p {
+  line-height: 1.75;
+  font-size: 0.97rem;
+  color: #475569;
+  margin: 0;
+}
+
+/* ── Features grid ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.feature-card:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(26, 86, 219, 0.12);
+}
+
+.feature-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Contact section ── */
+.aboutus-contact {
+  text-align: center;
+  background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+  border-color: #bfdbfe;
+}
+
+.aboutus-contact h2::before {
+  display: none;
+}
+
+.aboutus-contact h2 {
+  justify-content: center;
+}
+
+.aboutus-contact p {
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.contact-btn {
+  background: #1a56db;
+  color: #ffffff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+}
+
+.contact-btn:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26, 86, 219, 0.45);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .aboutus-container {
+    margin: 32px auto 48px;
+    padding: 0 16px;
+  }
+
+  .aboutus-content article,
+  .aboutus-features,
+  .aboutus-contact {
+    padding: 24px 18px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

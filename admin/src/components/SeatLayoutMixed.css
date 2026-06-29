@@ -1,0 +1,33 @@
+/* Mixed-specific styles (lower seater + upper sleeper overrides) */
+.admin-seat-box.admin-seat-box-mixed-seater {
+  min-width: 58px;
+  max-width: 58px;
+  min-height: 56px;
+  border-radius: 9px;
+  padding: 4px 3px 4px;
+}
+
+.admin-seat-slot.spacer.seater-spacer {
+  min-height: 54px;
+  width: 38px;
+}
+
+.admin-seat-slot.spacer.mixed-seater-spacer {
+  min-height: 54px;
+  width: 32px;
+}
+
+.admin-deck-panel-seater .admin-seat-row.admin-deck-seat-row {
+  --mixed-seat-width: 50px;
+  --mixed-aisle-width: 32px;
+  grid-template-columns: var(--mixed-seat-width) var(--mixed-aisle-width) var(--mixed-seat-width) var(--mixed-seat-width);
+  column-gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .admin-deck-panel-seater .admin-seat-row.admin-deck-seat-row {
+    --mixed-seat-width: 52px;
+    --mixed-aisle-width: 24px;
+    column-gap: 12px;
+  }
+}

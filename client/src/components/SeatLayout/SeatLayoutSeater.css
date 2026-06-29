@@ -1,0 +1,79 @@
+.seater-layout {
+  width: fit-content;
+}
+
+.seater-map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.seater-map-card {
+  border: 1px solid #dbe2ea;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  padding: 14px 14px 12px;
+  width: fit-content;
+}
+
+.seater-map-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.seater-layout .seat-grid {
+  gap: 6px;
+}
+
+.seater-layout .seat-row {
+  display: grid;
+  grid-template-columns: 38px 38px 38px 38px 38px;
+  column-gap: 7px;
+  align-items: start;
+}
+
+.seater-layout .seat-box {
+  min-width: 38px;
+  max-width: 38px;
+  min-height: 54px;
+  border-radius: 9px;
+  padding: 4px 3px 4px;
+}
+
+.seater-layout .seat-slot.spacer {
+  min-height: 54px;
+  width: 38px;
+}
+
+.seater-layout .seat-number {
+  font-size: 0.72rem;
+  margin-top: 0;
+}
+
+.seater-layout .seat-status-label {
+  font-size: 0.54rem;
+}
+
+.seater-layout .seat-tag {
+  font-size: 0.5rem;
+  padding: 1px 3px;
+}
+
+@media (max-width: 768px) {
+  .seater-layout {
+    width: 100%;
+  }
+
+  .seater-map-wrapper {
+    justify-content: flex-start;
+  }
+
+  .seater-map-card {
+    width: 100%;
+  }
+
+  .seater-layout .seat-row {
+    grid-template-columns: 34px 34px 34px 34px 34px;
+    column-gap: 6px;
+  }
+}

@@ -1,0 +1,94 @@
+/* Seater-specific styles */
+.admin-seater-layout {
+  width: fit-content;
+}
+
+.admin-seater-map-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-seater-map-card {
+  border: 1px solid #dbe2ea;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+  padding: 14px 14px 12px;
+  width: fit-content;
+}
+
+.admin-seater-map-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.admin-seat-row.admin-seater-row {
+  grid-template-columns: 38px 38px 38px 38px 38px;
+  column-gap: 7px;
+}
+
+.admin-seat-box.admin-seat-box-seater {
+  min-width: 38px;
+  max-width: 38px;
+  min-height: 54px;
+  height: 54px;
+  border-radius: 9px;
+  padding: 4px 3px 4px;
+  overflow: hidden;
+}
+
+.admin-seat-box.admin-seat-box-seater .seat-number,
+.admin-seat-box.admin-seat-box-mixed-seater .seat-number {
+  font-size: 0.72rem;
+  margin-top: 0;
+}
+
+.admin-seat-box.admin-seat-box-seater .seat-status-label,
+.admin-seat-box.admin-seat-box-mixed-seater .seat-status-label {
+  font-size: 0.54rem;
+}
+
+.admin-seat-box.admin-seat-box-seater .seat-tag,
+.admin-seat-box.admin-seat-box-mixed-seater .seat-tag {
+  font-size: 0.5rem;
+  padding: 1px 3px;
+}
+
+.admin-seat-box.admin-seat-box-seater.female-only {
+  gap: 0;
+  padding: 4px 3px 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-seat-box.admin-seat-box-seater.female-only .seat-number {
+  margin: 0;
+}
+
+.admin-seat-box.admin-seat-box-seater.female-only .seat-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .admin-seater-layout {
+    width: 100%;
+  }
+
+  .admin-seater-map-wrapper {
+    justify-content: flex-start;
+  }
+
+  .admin-seater-map-card {
+    width: 100%;
+  }
+
+  .admin-seat-row.admin-seater-row {
+    grid-template-columns: 34px 34px 34px 34px 34px;
+    column-gap: 6px;
+  }
+}

@@ -1,0 +1,54 @@
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-options label {
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+
+.filter-sidebar hr {
+  display: block;
+  border: 0;
+  border-top: 2px solid #d1d5db;
+  margin: 12px 0 18px;
+}
+
+/* Make the Filters heading Arial bold with no underline */
+.sidebar-header h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-bottom: none;
+  text-decoration: none;
+  margin: 0;
+  color: inherit;
+}
+
+.filter-group h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 8px;
+}
